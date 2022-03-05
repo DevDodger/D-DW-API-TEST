@@ -3,44 +3,51 @@
 
 -- Instances:
 
-local MainGui2 = Instance.new("ScreenGui")
-local Main = Instance.new("Frame")
-local UIGradient = Instance.new("UIGradient")
-local UICorner = Instance.new("UICorner")
+local MainGui = Instance.new("ScreenGui")
+local mainLobby = Instance.new("Frame")
 local Pattern = Instance.new("ImageLabel")
 local DisplayName = Instance.new("TextLabel")
 local Username = Instance.new("TextLabel")
-local UICorner_2 = Instance.new("UICorner")
 local ImageLabel = Instance.new("ImageLabel")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner = Instance.new("UICorner")
 local Back = Instance.new("TextLabel")
+local Icon = Instance.new("ImageLabel")
+local ImageButton = Instance.new("ImageButton")
+local Frame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local moon = Instance.new("ImageLabel")
+local Dropper = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local RightArrow = Instance.new("TextLabel")
+local LeftArrow = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local dropperFrame = Instance.new("Frame")
+local UIGradient_2 = Instance.new("UIGradient")
+local UICorner_5 = Instance.new("UICorner")
+local Pattern_2 = Instance.new("ImageLabel")
 
 --Properties:
 
-MainGui2.Name = "MainGui2"
-MainGui2.Parent = game.CoreGui
-MainGui2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+MainGui.Name = "MainGui"
+MainGui.Parent = game.CoreGui
+MainGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Main.Name = "Main"
-Main.Parent = MainGui2
-Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main.BorderColor3 = Color3.fromRGB(27, 42, 53)
-Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0, 315, 0, 235)
-Main.Size = UDim2.new(0, 473, 0, 281)
-Main.Active = true
-Main.Draggable = true
-
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 148, 102)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(237, 102, 109))}
-UIGradient.Parent = Main
-
-UICorner.Parent = Main
+mainLobby.Name = "mainLobby"
+mainLobby.Parent = MainGui
+mainLobby.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mainLobby.BorderColor3 = Color3.fromRGB(27, 42, 53)
+mainLobby.BorderSizePixel = 0
+mainLobby.Position = UDim2.new(0.246286154, 0, 0.326388896, 0)
+mainLobby.Size = UDim2.new(0.369820178, 0, 0.390277773, 0)
+MainGui.Active = true
+MainGui.Draggable = true
 
 Pattern.Name = "Pattern"
-Pattern.Parent = Main
+Pattern.Parent = mainLobby
 Pattern.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Pattern.BackgroundTransparency = 1.000
-Pattern.Size = UDim2.new(0, 473, 0, 281)
+Pattern.Size = UDim2.new(1, 0, 1, 0)
 Pattern.ZIndex = 2
 Pattern.Image = "rbxassetid://2151741365"
 Pattern.ImageTransparency = 0.600
@@ -49,11 +56,11 @@ Pattern.SliceCenter = Rect.new(0, 256, 0, 256)
 Pattern.TileSize = UDim2.new(0, 250, 0, 250)
 
 DisplayName.Name = "DisplayName"
-DisplayName.Parent = Main
+DisplayName.Parent = mainLobby
 DisplayName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 DisplayName.BackgroundTransparency = 1.000
-DisplayName.Position = UDim2.new(0, 56, 0, 257)
-DisplayName.Size = UDim2.new(0, 114, 0, 24)
+DisplayName.Position = UDim2.new(0.118393235, 0, 0.914590776, 0)
+DisplayName.Size = UDim2.new(0.241014794, 0, 0.0854092538, 0)
 DisplayName.ZIndex = 2
 DisplayName.Font = Enum.Font.GothamSemibold
 DisplayName.Text = "DisplayName"
@@ -64,11 +71,11 @@ DisplayName.TextWrapped = true
 DisplayName.TextXAlignment = Enum.TextXAlignment.Left
 
 Username.Name = "Username"
-Username.Parent = Main
+Username.Parent = mainLobby
 Username.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Username.BackgroundTransparency = 1.000
-Username.Position = UDim2.new(0, 42, 0, 213)
-Username.Size = UDim2.new(0, 141, 0, 68)
+Username.Position = UDim2.new(0.118393235, 0, 0.722419918, 0)
+Username.Size = UDim2.new(0.298097253, 0, 0.241992876, 0)
 Username.ZIndex = 2
 Username.Font = Enum.Font.GothamSemibold
 Username.Text = "Username"
@@ -78,44 +85,149 @@ Username.TextSize = 14.000
 Username.TextWrapped = true
 Username.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_2.CornerRadius = UDim.new(1, 0)
-UICorner_2.Parent = Main
-
-ImageLabel.Parent = Main
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.Position = UDim2.new(0, -27, 0, 224)
-ImageLabel.Size = UDim2.new(0, 69, 0, 70)
+ImageLabel.Parent = mainLobby
+ImageLabel.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+ImageLabel.Position = UDim2.new(-0.0570824519, 0, 0.797152996, 0)
+ImageLabel.Size = UDim2.new(0.145877376, 0, 0.249110326, 0)
 ImageLabel.ZIndex = 3
-ImageLabel.Image = "http://www.roblox.com/asset/?id=8826500982"
+ImageLabel.Image = "rbxassetid://7072719446"
 
-UICorner_3.CornerRadius = UDim.new(1, 0)
-UICorner_3.Parent = ImageLabel
+UICorner.CornerRadius = UDim.new(1, 0)
+UICorner.Parent = ImageLabel
 
 Back.Name = "Back"
-Back.Parent = Main
+Back.Parent = mainLobby
 Back.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Back.BackgroundTransparency = 1.000
 Back.Position = UDim2.new(0.308668077, 0, 0, 0)
-Back.Size = UDim2.new(0, 181, 0, 45)
+Back.Size = UDim2.new(0.382663846, 0, 0.160142347, 0)
 Back.ZIndex = 100
 Back.Font = Enum.Font.GothamSemibold
-Back.Text = "D&DW "
+Back.Text = "Eclipse Hub"
 Back.TextColor3 = Color3.fromRGB(255, 255, 255)
+Back.TextScaled = true
 Back.TextSize = 57.000
 Back.TextWrapped = true
 
+Icon.Name = "Icon"
+Icon.Parent = mainLobby
+Icon.BackgroundTransparency = 1.000
+Icon.Position = UDim2.new(0.0147991544, 0, 0.0213523135, 0)
+Icon.Size = UDim2.new(0.0718816072, 0, 0.135231316, 0)
+Icon.ZIndex = 99999
+Icon.Image = "rbxassetid://7072718840"
+
+ImageButton.Parent = Icon
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.Position = UDim2.new(0, 0, -3.97981722e-07, 0)
+ImageButton.Size = UDim2.new(0, 34, 0, 38)
+ImageButton.ZIndex = 999999999
+ImageButton.Image = "rbxassetid://7072718840"
+
+Frame.Parent = ImageButton
+Frame.BackgroundColor3 = Color3.fromRGB(85, 85, 85)
+Frame.BackgroundTransparency = 0.500
+Frame.Position = UDim2.new(0, 0, -3.97981722e-07, 0)
+Frame.Size = UDim2.new(0, 34, 0, 38)
+
+UICorner_2.Parent = Frame
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(63, 27, 70)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(17, 3, 127))}
+UIGradient.Parent = mainLobby
+
+moon.Name = "moon"
+moon.Parent = mainLobby
+moon.BackgroundTransparency = 1.000
+moon.Position = UDim2.new(0.1564482, 0, -0.0533807836, 0)
+moon.Size = UDim2.new(0.723044395, 0, 1.10676157, 0)
+moon.Image = "rbxassetid://7072719446"
+moon.ImageColor3 = Color3.fromRGB(74, 74, 74)
+moon.ImageTransparency = 0.700
+
+Dropper.Name = "Dropper"
+Dropper.Parent = mainLobby
+Dropper.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Dropper.BackgroundTransparency = 0.700
+Dropper.Position = UDim2.new(0.205073997, 0, 0.259786487, 0)
+Dropper.Size = UDim2.new(0.585623682, 0, 0.167259783, 0)
+Dropper.Font = Enum.Font.SourceSansBold
+Dropper.Text = "DaHood Cash Dropper"
+Dropper.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dropper.TextSize = 20.000
+Dropper.TextWrapped = true
+
+UICorner_3.Parent = Dropper
+
+RightArrow.Name = "RightArrow"
+RightArrow.Parent = Dropper
+RightArrow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RightArrow.BackgroundTransparency = 1.000
+RightArrow.Position = UDim2.new(0.95745492, 0, -0.00872340426, 0)
+RightArrow.Size = UDim2.new(0.262239784, 0, 1, 0)
+RightArrow.Font = Enum.Font.FredokaOne
+RightArrow.Text = "<"
+RightArrow.TextColor3 = Color3.fromRGB(255, 255, 255)
+RightArrow.TextScaled = true
+RightArrow.TextSize = 14.000
+RightArrow.TextTransparency = 1.000
+RightArrow.TextWrapped = true
+
+LeftArrow.Name = "LeftArrow"
+LeftArrow.Parent = Dropper
+LeftArrow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LeftArrow.BackgroundTransparency = 1.000
+LeftArrow.Position = UDim2.new(-0.219675094, 0, -0.00872340426, 0)
+LeftArrow.Size = UDim2.new(0.262239784, 0, 1, 0)
+LeftArrow.Font = Enum.Font.FredokaOne
+LeftArrow.Text = ">"
+LeftArrow.TextColor3 = Color3.fromRGB(255, 255, 255)
+LeftArrow.TextScaled = true
+LeftArrow.TextSize = 14.000
+LeftArrow.TextTransparency = 1.000
+LeftArrow.TextWrapped = true
+
+UICorner_4.Parent = mainLobby
+
+dropperFrame.Name = "dropperFrame"
+dropperFrame.Parent = MainGui
+dropperFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dropperFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+dropperFrame.BorderSizePixel = 0
+dropperFrame.Position = UDim2.new(0.245504305, 0, 0.324999988, 0)
+dropperFrame.Size = UDim2.new(0.369820178, 0, 0.394444436, 0)
+dropperFrame.Visible = false
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(182, 141, 159)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(64, 96, 161))}
+UIGradient_2.Rotation = 50
+UIGradient_2.Parent = dropperFrame
+
+UICorner_5.Parent = dropperFrame
+
+Pattern_2.Name = "Pattern"
+Pattern_2.Parent = dropperFrame
+Pattern_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pattern_2.BackgroundTransparency = 1.000
+Pattern_2.Position = UDim2.new(0.0010570765, 0, 1.67638063e-08, 0)
+Pattern_2.Size = UDim2.new(0, 473, 0, 284)
+Pattern_2.ZIndex = 9
+Pattern_2.Image = "rbxassetid://10530276"
+Pattern_2.ImageTransparency = 0.600
+Pattern_2.ScaleType = Enum.ScaleType.Tile
+Pattern_2.SliceCenter = Rect.new(0, 256, 0, 256)
+Pattern_2.TileSize = UDim2.new(0, 30, 0, 30)
+
 -- Scripts:
 
-local function YBSXBP_fake_script() -- Main.PlayerNames 
-	local script = Instance.new('LocalScript', Main)
+local function YIZGVXL_fake_script() -- mainLobby.PlayerNames 
+	local script = Instance.new('LocalScript', mainLobby)
 
 	local plr = game.Players.LocalPlayer
 	
 	script.Parent.DisplayName.Text = plr.DisplayName
-	script.Parent.Username.Text = "@"..plr.Name
+	script.Parent.Username.Text = "@"..plr.Name 
 end
-coroutine.wrap(YBSXBP_fake_script)()
-local function IKMG_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(YIZGVXL_fake_script)()
+local function LQYNTV_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local plr = game.Players.LocalPlayer
@@ -123,4 +235,63 @@ local function IKMG_fake_script() -- ImageLabel.LocalScript
 	
 	script.Parent.Image = img
 end
-coroutine.wrap(IKMG_fake_script)()
+coroutine.wrap(LQYNTV_fake_script)()
+local function BQHBX_fake_script() -- Dropper.HoverScript 
+	local script = Instance.new('LocalScript', Dropper)
+
+	-- This is for the buttons effects.
+	-- Edit if you know what you are doing.
+	
+	local button = script.Parent
+	local leftarrow = script.Parent.LeftArrow
+	local rightarrow = script.Parent.RightArrow
+	local TweenService = game:GetService("TweenService")
+	local TweenSpeed = 0.1
+	local Info = TweenInfo.new(TweenSpeed, Enum.EasingStyle.Quad, Enum.EasingDirection.In, 0)
+	
+	--- Position ---
+	
+	button.MouseEnter:Connect(function()
+		leftarrow:TweenPosition(UDim2.new(0, 0,-0.03, 0), "In", "Quad", 0.1, true)
+		rightarrow:TweenPosition(UDim2.new(0.735, 0,-0.03, 0), "In", "Quad", 0.1, true)
+	end)
+	button.MouseLeave:Connect(function()
+		leftarrow:TweenPosition(UDim2.new(-0.05, 0,-0.03, 0), "Out", "Quad", 0.1, true)
+		rightarrow:TweenPosition(UDim2.new(0.795, 0,-0.03, 0), "Out", "Quad", 0.1, true)
+	end)
+	
+	--- Color ---
+	
+	button.MouseEnter:Connect(function()
+		local Color = Color3.fromRGB(60, 60, 60)
+		TweenService:Create(button, Info, {BackgroundColor3 = Color}):Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		local ColorColor = Color3.fromRGB(43, 43, 43)
+		TweenService:Create(button, Info, {BackgroundColor3 = ColorColor}):Play()
+	end)
+	
+	--- Transparency ---
+	
+	button.MouseEnter:Connect(function()
+		TweenService:Create(leftarrow, Info, {TextTransparency = 0}):Play()
+		TweenService:Create(rightarrow, Info, {TextTransparency = 0}):Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		TweenService:Create(leftarrow, Info, {TextTransparency = 1}):Play()
+		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
+	end)
+end
+coroutine.wrap(BQHBX_fake_script)()
+local function HMLH_fake_script() -- Dropper.Tpx 
+	local script = Instance.new('LocalScript', Dropper)
+
+	script.Parent.MouseButton1Click:connect(function(plr)
+		plr.PlayerGui.MainGui.mainLobby.Visible = false
+		plr.PlayerGui.MainGui.dropperFrame.Visible = true
+		wait(0.1)
+	end)
+end
+coroutine.wrap(HMLH_fake_script)()
