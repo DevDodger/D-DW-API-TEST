@@ -1,0 +1,182 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local MainGui = Instance.new("ScreenGui")
+local Gradient = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local UICorner = Instance.new("UICorner")
+local Pattern = Instance.new("ImageLabel")
+local DisplayName = Instance.new("TextLabel")
+local Username = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner_3 = Instance.new("UICorner")
+local Back = Instance.new("TextLabel")
+local Front = Instance.new("TextLabel")
+
+--Properties:
+
+MainGui.Name = "MainGui"
+MainGui.Parent = game.Workspace
+MainGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Gradient.Name = "Gradient"
+Gradient.Parent = MainGui
+Gradient.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gradient.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Gradient.BorderSizePixel = 0
+Gradient.Position = UDim2.new(0, 315, 0, 235)
+Gradient.Size = UDim2.new(0, 473, 0, 281)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 148, 102)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(237, 102, 109))}
+UIGradient.Parent = Gradient
+
+UICorner.Parent = Gradient
+
+Pattern.Name = "Pattern"
+Pattern.Parent = Gradient
+Pattern.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pattern.BackgroundTransparency = 1.000
+Pattern.Size = UDim2.new(0, 473, 0, 281)
+Pattern.ZIndex = 2
+Pattern.Image = "rbxassetid://2151741365"
+Pattern.ImageTransparency = 0.600
+Pattern.ScaleType = Enum.ScaleType.Tile
+Pattern.SliceCenter = Rect.new(0, 256, 0, 256)
+Pattern.TileSize = UDim2.new(0, 250, 0, 250)
+
+DisplayName.Name = "DisplayName"
+DisplayName.Parent = Gradient
+DisplayName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DisplayName.BackgroundTransparency = 1.000
+DisplayName.Position = UDim2.new(0, 56, 0, 257)
+DisplayName.Size = UDim2.new(0, 114, 0, 24)
+DisplayName.ZIndex = 2
+DisplayName.Font = Enum.Font.GothamSemibold
+DisplayName.Text = "DisplayName"
+DisplayName.TextColor3 = Color3.fromRGB(255, 255, 255)
+DisplayName.TextScaled = true
+DisplayName.TextSize = 14.000
+DisplayName.TextWrapped = true
+DisplayName.TextXAlignment = Enum.TextXAlignment.Left
+
+Username.Name = "Username"
+Username.Parent = Gradient
+Username.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Username.BackgroundTransparency = 1.000
+Username.Position = UDim2.new(0, 42, 0, 213)
+Username.Size = UDim2.new(0, 141, 0, 68)
+Username.ZIndex = 2
+Username.Font = Enum.Font.GothamSemibold
+Username.Text = "Username"
+Username.TextColor3 = Color3.fromRGB(255, 255, 255)
+Username.TextScaled = true
+Username.TextSize = 14.000
+Username.TextWrapped = true
+Username.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_2.CornerRadius = UDim.new(1, 0)
+UICorner_2.Parent = Gradient
+
+ImageLabel.Parent = Gradient
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0, -27, 0, 224)
+ImageLabel.Size = UDim2.new(0, 69, 0, 70)
+ImageLabel.ZIndex = 3
+ImageLabel.Image = "http://www.roblox.com/asset/?id=8826500982"
+
+UICorner_3.CornerRadius = UDim.new(1, 0)
+UICorner_3.Parent = ImageLabel
+
+Back.Name = "Back"
+Back.Parent = Gradient
+Back.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Back.BackgroundTransparency = 1.000
+Back.Position = UDim2.new(0.302325577, 0, 0, 0)
+Back.Size = UDim2.new(0, 181, 0, 45)
+Back.ZIndex = 100
+Back.Font = Enum.Font.GothamSemibold
+Back.Text = "D&DW "
+Back.TextColor3 = Color3.fromRGB(20, 255, 240)
+Back.TextSize = 57.000
+Back.TextWrapped = true
+
+Front.Name = "Front"
+Front.Parent = Gradient
+Front.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Front.BackgroundTransparency = 1.000
+Front.Position = UDim2.new(0.302325577, 0, 0.0284697507, 0)
+Front.Size = UDim2.new(0, 187, 0, 37)
+Front.ZIndex = 100
+Front.Font = Enum.Font.GothamSemibold
+Front.Text = "D&DW "
+Front.TextColor3 = Color3.fromRGB(255, 83, 86)
+Front.TextSize = 57.000
+Front.TextWrapped = true
+
+-- Scripts:
+
+local function JWGV_fake_script() -- Gradient.LocalScript 
+	local script = Instance.new('LocalScript', Gradient)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(JWGV_fake_script)()
+local function YHEDHWH_fake_script() -- Gradient.PlayerNames 
+	local script = Instance.new('LocalScript', Gradient)
+
+	local plr = game.Players.LocalPlayer
+	
+	script.Parent.DisplayName.Text = plr.DisplayName
+	script.Parent.Username.Text = "@"..plr.Name
+end
+coroutine.wrap(YHEDHWH_fake_script)()
+local function YEBSE_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local plr = game.Players.LocalPlayer
+	local img = game.Players:GetUserThumbnailAsync(plr.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size352x352)
+	
+	script.Parent.Image = img
+end
+coroutine.wrap(YEBSE_fake_script)()
