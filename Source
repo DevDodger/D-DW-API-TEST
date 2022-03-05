@@ -1,16 +1,15 @@
--- Gui to Lua
--- Version: 3.2
+-- Eclipse
+-- Version: 1
 
 -- Instances:
 
-local MainGui = Instance.new("ScreenGui")
+local MainGui1Test = Instance.new("ScreenGui")
 local mainLobby = Instance.new("Frame")
 local DisplayName = Instance.new("TextLabel")
 local Username = Instance.new("TextLabel")
 local ImageLabel = Instance.new("ImageLabel")
 local UICorner = Instance.new("UICorner")
 local Back = Instance.new("TextLabel")
-local Icon = Instance.new("ImageLabel")
 local UIGradient = Instance.new("UIGradient")
 local moon = Instance.new("ImageLabel")
 local AboutUs = Instance.new("TextButton")
@@ -19,19 +18,46 @@ local RightArrow = Instance.new("TextLabel")
 local LeftArrow = Instance.new("TextLabel")
 local UICorner_3 = Instance.new("UICorner")
 local Pattern = Instance.new("ImageLabel")
+local ImageButton = Instance.new("ImageButton")
+local dropperFrame = Instance.new("Frame")
+local UIGradient_2 = Instance.new("UIGradient")
+local UICorner_4 = Instance.new("UICorner")
+local Pattern_2 = Instance.new("ImageLabel")
+local Back_2 = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local RightArrow_2 = Instance.new("TextLabel")
+local LeftArrow_2 = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local Main = Instance.new("TextLabel")
+local Main_2 = Instance.new("TextLabel")
+local PopOut = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local Pattern_3 = Instance.new("ImageLabel")
+local UIGradient_3 = Instance.new("UIGradient")
+local TextButton = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local UIGradient_4 = Instance.new("UIGradient")
+local hackFrame1 = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local UIGradient_5 = Instance.new("UIGradient")
+local Pattern_4 = Instance.new("ImageLabel")
+local Back_3 = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local RightArrow_3 = Instance.new("TextLabel")
+local LeftArrow_3 = Instance.new("TextLabel")
 
 --Properties:
 
-MainGui.Name = "MainGui"
-MainGui.Parent = game.CoreGui
-MainGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+MainGui1Test.Name = "MainGui1Test"
+MainGui1Test.Parent = game.CoreGui
+MainGui1Test.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 mainLobby.Name = "mainLobby"
-mainLobby.Parent = MainGui
+mainLobby.Parent = MainGui1Test
 mainLobby.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 mainLobby.BorderColor3 = Color3.fromRGB(27, 42, 53)
 mainLobby.BorderSizePixel = 0
-mainLobby.Position = UDim2.new(0.246286154, 0, 0.326388896, 0)
+mainLobby.Position = UDim2.new(0, 314, 0, 235)
 mainLobby.Size = UDim2.new(0.369820178, 0, 0.390277773, 0)
 mainLobby.Active = true
 mainLobby.Draggable = true
@@ -89,14 +115,6 @@ Back.TextColor3 = Color3.fromRGB(255, 255, 255)
 Back.TextScaled = true
 Back.TextSize = 57.000
 Back.TextWrapped = true
-
-Icon.Name = "Icon"
-Icon.Parent = mainLobby
-Icon.BackgroundTransparency = 1.000
-Icon.Position = UDim2.new(0.0147991544, 0, 0.0213523135, 0)
-Icon.Size = UDim2.new(0.0718816072, 0, 0.135231316, 0)
-Icon.ZIndex = 99999
-Icon.Image = "rbxassetid://7072718840"
 
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(63, 27, 70)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(17, 3, 127))}
 UIGradient.Parent = mainLobby
@@ -166,9 +184,233 @@ Pattern.ScaleType = Enum.ScaleType.Tile
 Pattern.SliceCenter = Rect.new(0, 256, 0, 256)
 Pattern.TileSize = UDim2.new(0, 250, 0, 250)
 
+ImageButton.Parent = mainLobby
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.Position = UDim2.new(0.904077113, 0, 0, 0)
+ImageButton.Size = UDim2.new(0, 44, 0, 45)
+ImageButton.ZIndex = 999999999
+ImageButton.Image = "rbxassetid://7072718840"
+
+dropperFrame.Name = "dropperFrame"
+dropperFrame.Parent = MainGui1Test
+dropperFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dropperFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+dropperFrame.BorderSizePixel = 0
+dropperFrame.Position = UDim2.new(0, 314, 0, 233)
+dropperFrame.Size = UDim2.new(0.369820178, 0, 0.394444436, 0)
+dropperFrame.Visible = false
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(182, 141, 159)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(64, 96, 161))}
+UIGradient_2.Rotation = 50
+UIGradient_2.Parent = dropperFrame
+
+UICorner_4.Parent = dropperFrame
+
+Pattern_2.Name = "Pattern"
+Pattern_2.Parent = dropperFrame
+Pattern_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pattern_2.BackgroundTransparency = 1.000
+Pattern_2.Position = UDim2.new(-0.00317120552, 0, 0, 0)
+Pattern_2.Size = UDim2.new(0, 473, 0, 284)
+Pattern_2.ZIndex = 9
+Pattern_2.Image = "rbxassetid://10530276"
+Pattern_2.ImageTransparency = 0.600
+Pattern_2.ScaleType = Enum.ScaleType.Tile
+Pattern_2.SliceCenter = Rect.new(0, 256, 0, 256)
+Pattern_2.TileSize = UDim2.new(0, 30, 0, 30)
+
+Back_2.Name = "Back"
+Back_2.Parent = dropperFrame
+Back_2.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Back_2.BackgroundTransparency = 0.750
+Back_2.Position = UDim2.new(0.0338266343, 0, 0.787955523, 0)
+Back_2.Size = UDim2.new(0.313500434, 0, 0.167259768, 0)
+Back_2.ZIndex = 999999999
+Back_2.Font = Enum.Font.SourceSansBold
+Back_2.Text = "Back"
+Back_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Back_2.TextSize = 20.000
+Back_2.TextWrapped = true
+
+UICorner_5.Parent = Back_2
+
+RightArrow_2.Name = "RightArrow"
+RightArrow_2.Parent = Back_2
+RightArrow_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RightArrow_2.BackgroundTransparency = 1.000
+RightArrow_2.Position = UDim2.new(0.95745492, 0, -0.00872340426, 0)
+RightArrow_2.Size = UDim2.new(0.262239784, 0, 1, 0)
+RightArrow_2.Font = Enum.Font.FredokaOne
+RightArrow_2.Text = "<"
+RightArrow_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+RightArrow_2.TextScaled = true
+RightArrow_2.TextSize = 14.000
+RightArrow_2.TextTransparency = 1.000
+RightArrow_2.TextWrapped = true
+
+LeftArrow_2.Name = "LeftArrow"
+LeftArrow_2.Parent = Back_2
+LeftArrow_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LeftArrow_2.BackgroundTransparency = 1.000
+LeftArrow_2.Position = UDim2.new(-0.219675094, 0, -0.00872340426, 0)
+LeftArrow_2.Size = UDim2.new(0.262239784, 0, 1, 0)
+LeftArrow_2.Font = Enum.Font.FredokaOne
+LeftArrow_2.Text = ">"
+LeftArrow_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+LeftArrow_2.TextScaled = true
+LeftArrow_2.TextSize = 14.000
+LeftArrow_2.TextTransparency = 1.000
+LeftArrow_2.TextWrapped = true
+
+TextLabel.Parent = dropperFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.285412252, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.Text = "About Us"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 42.000
+
+Main.Name = "Main"
+Main.Parent = dropperFrame
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.Position = UDim2.new(0.041800186, 0, 0.309859157, 0)
+Main.Size = UDim2.new(0, 432, 0, 108)
+Main.Font = Enum.Font.GothamSemibold
+Main.Text = "We are the owners of D&DW DHC, We are advanced programmers and have worked on many games."
+Main.TextColor3 = Color3.fromRGB(255, 255, 255)
+Main.TextScaled = true
+Main.TextSize = 14.000
+Main.TextWrapped = true
+
+Main_2.Name = "Main"
+Main_2.Parent = dropperFrame
+Main_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main_2.BackgroundTransparency = 1.000
+Main_2.Position = UDim2.new(0.430685669, 0, 0.817130506, 0)
+Main_2.Size = UDim2.new(0, 243, 0, 51)
+Main_2.Font = Enum.Font.GothamSemibold
+Main_2.Text = "Scripted by: dodgersbiggestfan35, Anxllty. UI Design: dodgersbiggestfan35, Anxllty."
+Main_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Main_2.TextScaled = true
+Main_2.TextSize = 14.000
+Main_2.TextWrapped = true
+
+PopOut.Name = "PopOut"
+PopOut.Parent = MainGui1Test
+PopOut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PopOut.Position = UDim2.new(0, 787, 0, 235)
+PopOut.Size = UDim2.new(0.0609851442, 0, 0.390277773, 0)
+PopOut.Visible = false
+
+UICorner_6.Parent = PopOut
+
+Pattern_3.Name = "Pattern"
+Pattern_3.Parent = PopOut
+Pattern_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pattern_3.BackgroundTransparency = 1.000
+Pattern_3.Size = UDim2.new(1, 0, 1, 0)
+Pattern_3.ZIndex = 2
+Pattern_3.Image = "rbxassetid://2151741365"
+Pattern_3.ImageTransparency = 0.600
+Pattern_3.ScaleType = Enum.ScaleType.Tile
+Pattern_3.SliceCenter = Rect.new(0, 256, 0, 256)
+Pattern_3.TileSize = UDim2.new(0, 250, 0, 250)
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(63, 27, 70)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(17, 3, 127))}
+UIGradient_3.Rotation = 180
+UIGradient_3.Parent = PopOut
+
+TextButton.Parent = PopOut
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.0641025677, 0, 0.0292831957, 0)
+TextButton.Size = UDim2.new(0, 68, 0, 36)
+TextButton.ZIndex = 999
+TextButton.Font = Enum.Font.GothamSemibold
+TextButton.Text = "Hacks1"
+TextButton.TextColor3 = Color3.fromRGB(100, 100, 100)
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner_7.Parent = TextButton
+
+UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(182, 141, 159)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(64, 96, 161))}
+UIGradient_4.Parent = TextButton
+
+hackFrame1.Name = "hackFrame1"
+hackFrame1.Parent = MainGui1Test
+hackFrame1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hackFrame1.Position = UDim2.new(0, 314, 0, 235)
+hackFrame1.Size = UDim2.new(0.369820178, 0, 0.390277773, 0)
+hackFrame1.Visible = false
+
+UICorner_8.Parent = hackFrame1
+
+UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(102, 45, 113)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(197, 66, 110))}
+UIGradient_5.Parent = hackFrame1
+
+Pattern_4.Name = "Pattern"
+Pattern_4.Parent = hackFrame1
+Pattern_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pattern_4.BackgroundTransparency = 1.000
+Pattern_4.Position = UDim2.new(-0.00357621908, 0, -0.00101324916, 0)
+Pattern_4.Size = UDim2.new(0, 473, 0, 280)
+Pattern_4.ZIndex = 9
+Pattern_4.Image = "rbxassetid://121480522"
+Pattern_4.ImageTransparency = 0.600
+Pattern_4.ScaleType = Enum.ScaleType.Tile
+Pattern_4.SliceCenter = Rect.new(0, 256, 0, 256)
+Pattern_4.TileSize = UDim2.new(0, 45, 0, 45)
+
+Back_3.Name = "Back"
+Back_3.Parent = hackFrame1
+Back_3.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Back_3.BackgroundTransparency = 0.750
+Back_3.Position = UDim2.new(0.0338266343, 0, 0.787955523, 0)
+Back_3.Size = UDim2.new(0.313500434, 0, 0.167259768, 0)
+Back_3.ZIndex = 999999999
+Back_3.Font = Enum.Font.SourceSansBold
+Back_3.Text = "Back"
+Back_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Back_3.TextSize = 20.000
+Back_3.TextWrapped = true
+
+UICorner_9.Parent = Back_3
+
+RightArrow_3.Name = "RightArrow"
+RightArrow_3.Parent = Back_3
+RightArrow_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RightArrow_3.BackgroundTransparency = 1.000
+RightArrow_3.Position = UDim2.new(0.95745492, 0, -0.00872340426, 0)
+RightArrow_3.Size = UDim2.new(0.262239784, 0, 1, 0)
+RightArrow_3.Font = Enum.Font.FredokaOne
+RightArrow_3.Text = "<"
+RightArrow_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+RightArrow_3.TextScaled = true
+RightArrow_3.TextSize = 14.000
+RightArrow_3.TextTransparency = 1.000
+RightArrow_3.TextWrapped = true
+
+LeftArrow_3.Name = "LeftArrow"
+LeftArrow_3.Parent = Back_3
+LeftArrow_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LeftArrow_3.BackgroundTransparency = 1.000
+LeftArrow_3.Position = UDim2.new(-0.219675094, 0, -0.00872340426, 0)
+LeftArrow_3.Size = UDim2.new(0.262239784, 0, 1, 0)
+LeftArrow_3.Font = Enum.Font.FredokaOne
+LeftArrow_3.Text = ">"
+LeftArrow_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+LeftArrow_3.TextScaled = true
+LeftArrow_3.TextSize = 14.000
+LeftArrow_3.TextTransparency = 1.000
+LeftArrow_3.TextWrapped = true
+
 -- Scripts:
 
-local function HAYGNNL_fake_script() -- mainLobby.PlayerNames 
+local function MWINPM_fake_script() -- mainLobby.PlayerNames 
 	local script = Instance.new('LocalScript', mainLobby)
 
 	local plr = game.Players.LocalPlayer
@@ -176,8 +418,8 @@ local function HAYGNNL_fake_script() -- mainLobby.PlayerNames
 	script.Parent.DisplayName.Text = plr.DisplayName
 	script.Parent.Username.Text = "@"..plr.Name 
 end
-coroutine.wrap(HAYGNNL_fake_script)()
-local function UDZK_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(MWINPM_fake_script)()
+local function ENBAS_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local plr = game.Players.LocalPlayer
@@ -185,8 +427,8 @@ local function UDZK_fake_script() -- ImageLabel.LocalScript
 	
 	script.Parent.Image = img
 end
-coroutine.wrap(UDZK_fake_script)()
-local function PYXJ_fake_script() -- AboutUs.HoverScript 
+coroutine.wrap(ENBAS_fake_script)()
+local function ZBDZPS_fake_script() -- AboutUs.HoverScript 
 	local script = Instance.new('LocalScript', AboutUs)
 
 	-- This is for the buttons effects.
@@ -234,4 +476,152 @@ local function PYXJ_fake_script() -- AboutUs.HoverScript
 		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
 	end)
 end
-coroutine.wrap(PYXJ_fake_script)()
+coroutine.wrap(ZBDZPS_fake_script)()
+local function KGOG_fake_script() -- AboutUs.LocalScript 
+	local script = Instance.new('LocalScript', AboutUs)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.Parent.dropperFrame.Visible = true
+		script.Parent.Parent.Parent.mainLobby.Visible = false
+	
+	end)
+end
+coroutine.wrap(KGOG_fake_script)()
+local function BRUVPN_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.Parent.PopOut.Visible = true
+		script.Parent.Parent.Parent.mainLobby.Visible = true
+	
+	end)
+end
+coroutine.wrap(BRUVPN_fake_script)()
+local function MYTQW_fake_script() -- Back_2.HoverScript 
+	local script = Instance.new('LocalScript', Back_2)
+
+	-- This is for the buttons effects.
+	-- Edit if you know what you are doing.
+	
+	local button = script.Parent
+	local leftarrow = script.Parent.LeftArrow
+	local rightarrow = script.Parent.RightArrow
+	local TweenService = game:GetService("TweenService")
+	local TweenSpeed = 0.1
+	local Info = TweenInfo.new(TweenSpeed, Enum.EasingStyle.Quad, Enum.EasingDirection.In, 0)
+	
+	--- Position ---
+	
+	button.MouseEnter:Connect(function()
+		leftarrow:TweenPosition(UDim2.new(0, 0,-0.03, 0), "In", "Quad", 0.1, true)
+		rightarrow:TweenPosition(UDim2.new(0.735, 0,-0.03, 0), "In", "Quad", 0.1, true)
+	end)
+	button.MouseLeave:Connect(function()
+		leftarrow:TweenPosition(UDim2.new(-0.05, 0,-0.03, 0), "Out", "Quad", 0.1, true)
+		rightarrow:TweenPosition(UDim2.new(0.795, 0,-0.03, 0), "Out", "Quad", 0.1, true)
+	end)
+	
+	--- Color ---
+	
+	button.MouseEnter:Connect(function()
+		local Color = Color3.fromRGB(60, 60, 60)
+		TweenService:Create(button, Info, {BackgroundColor3 = Color}):Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		local ColorColor = Color3.fromRGB(43, 43, 43)
+		TweenService:Create(button, Info, {BackgroundColor3 = ColorColor}):Play()
+	end)
+	
+	--- Transparency ---
+	
+	button.MouseEnter:Connect(function()
+		TweenService:Create(leftarrow, Info, {TextTransparency = 0}):Play()
+		TweenService:Create(rightarrow, Info, {TextTransparency = 0}):Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		TweenService:Create(leftarrow, Info, {TextTransparency = 1}):Play()
+		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
+	end)
+end
+coroutine.wrap(MYTQW_fake_script)()
+local function NDUJQUG_fake_script() -- Back_2.LocalScript 
+	local script = Instance.new('LocalScript', Back_2)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.Parent.dropperFrame.Visible = false
+		script.Parent.Parent.Parent.mainLobby.Visible = true
+	
+	end)
+end
+coroutine.wrap(NDUJQUG_fake_script)()
+local function WPQWBNR_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.Parent.hackFrame1.Visible = true
+		script.Parent.Parent.Parent.mainLobby.Visible = false
+		script.Parent.Parent.Parent.PopOut.Visible = false
+	end)
+end
+coroutine.wrap(WPQWBNR_fake_script)()
+local function DPQY_fake_script() -- Back_3.HoverScript 
+	local script = Instance.new('LocalScript', Back_3)
+
+	-- This is for the buttons effects.
+	-- Edit if you know what you are doing.
+	
+	local button = script.Parent
+	local leftarrow = script.Parent.LeftArrow
+	local rightarrow = script.Parent.RightArrow
+	local TweenService = game:GetService("TweenService")
+	local TweenSpeed = 0.1
+	local Info = TweenInfo.new(TweenSpeed, Enum.EasingStyle.Quad, Enum.EasingDirection.In, 0)
+	
+	--- Position ---
+	
+	button.MouseEnter:Connect(function()
+		leftarrow:TweenPosition(UDim2.new(0, 0,-0.03, 0), "In", "Quad", 0.1, true)
+		rightarrow:TweenPosition(UDim2.new(0.735, 0,-0.03, 0), "In", "Quad", 0.1, true)
+	end)
+	button.MouseLeave:Connect(function()
+		leftarrow:TweenPosition(UDim2.new(-0.05, 0,-0.03, 0), "Out", "Quad", 0.1, true)
+		rightarrow:TweenPosition(UDim2.new(0.795, 0,-0.03, 0), "Out", "Quad", 0.1, true)
+	end)
+	
+	--- Color ---
+	
+	button.MouseEnter:Connect(function()
+		local Color = Color3.fromRGB(60, 60, 60)
+		TweenService:Create(button, Info, {BackgroundColor3 = Color}):Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		local ColorColor = Color3.fromRGB(43, 43, 43)
+		TweenService:Create(button, Info, {BackgroundColor3 = ColorColor}):Play()
+	end)
+	
+	--- Transparency ---
+	
+	button.MouseEnter:Connect(function()
+		TweenService:Create(leftarrow, Info, {TextTransparency = 0}):Play()
+		TweenService:Create(rightarrow, Info, {TextTransparency = 0}):Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		TweenService:Create(leftarrow, Info, {TextTransparency = 1}):Play()
+		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
+	end)
+end
+coroutine.wrap(DPQY_fake_script)()
+local function DDMQE_fake_script() -- Back_3.LocalScript 
+	local script = Instance.new('LocalScript', Back_3)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.Parent.hackFrame1.Visible = false
+		script.Parent.Parent.Parent.mainLobby.Visible = true
+	
+	end)
+end
+coroutine.wrap(DDMQE_fake_script)()
