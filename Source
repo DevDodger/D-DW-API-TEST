@@ -22,15 +22,11 @@ local UICorner_3 = Instance.new("UICorner")
 local RightArrow = Instance.new("TextLabel")
 local LeftArrow = Instance.new("TextLabel")
 local UICorner_4 = Instance.new("UICorner")
-local dropperFrame = Instance.new("Frame")
-local UIGradient_2 = Instance.new("UIGradient")
-local UICorner_5 = Instance.new("UICorner")
-local Pattern_2 = Instance.new("ImageLabel")
 
 --Properties:
 
 MainGui.Name = "MainGui"
-MainGui.Parent = game.CoreGui
+MainGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 MainGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 mainLobby.Name = "mainLobby"
@@ -188,37 +184,9 @@ LeftArrow.TextWrapped = true
 
 UICorner_4.Parent = mainLobby
 
-dropperFrame.Name = "dropperFrame"
-dropperFrame.Parent = MainGui
-dropperFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-dropperFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
-dropperFrame.BorderSizePixel = 0
-dropperFrame.Position = UDim2.new(0.245504305, 0, 0.324999988, 0)
-dropperFrame.Size = UDim2.new(0.369820178, 0, 0.394444436, 0)
-dropperFrame.Visible = false
-
-UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(182, 141, 159)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(64, 96, 161))}
-UIGradient_2.Rotation = 50
-UIGradient_2.Parent = dropperFrame
-
-UICorner_5.Parent = dropperFrame
-
-Pattern_2.Name = "Pattern"
-Pattern_2.Parent = dropperFrame
-Pattern_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Pattern_2.BackgroundTransparency = 1.000
-Pattern_2.Position = UDim2.new(0.0010570765, 0, 1.67638063e-08, 0)
-Pattern_2.Size = UDim2.new(0, 473, 0, 284)
-Pattern_2.ZIndex = 9
-Pattern_2.Image = "rbxassetid://10530276"
-Pattern_2.ImageTransparency = 0.600
-Pattern_2.ScaleType = Enum.ScaleType.Tile
-Pattern_2.SliceCenter = Rect.new(0, 256, 0, 256)
-Pattern_2.TileSize = UDim2.new(0, 30, 0, 30)
-
 -- Scripts:
 
-local function YIZGVXL_fake_script() -- mainLobby.PlayerNames 
+local function FKRCPS_fake_script() -- mainLobby.PlayerNames 
 	local script = Instance.new('LocalScript', mainLobby)
 
 	local plr = game.Players.LocalPlayer
@@ -226,8 +194,8 @@ local function YIZGVXL_fake_script() -- mainLobby.PlayerNames
 	script.Parent.DisplayName.Text = plr.DisplayName
 	script.Parent.Username.Text = "@"..plr.Name 
 end
-coroutine.wrap(YIZGVXL_fake_script)()
-local function LQYNTV_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(FKRCPS_fake_script)()
+local function SXGYTAM_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local plr = game.Players.LocalPlayer
@@ -235,8 +203,8 @@ local function LQYNTV_fake_script() -- ImageLabel.LocalScript
 	
 	script.Parent.Image = img
 end
-coroutine.wrap(LQYNTV_fake_script)()
-local function BQHBX_fake_script() -- Dropper.HoverScript 
+coroutine.wrap(SXGYTAM_fake_script)()
+local function EWKNU_fake_script() -- Dropper.HoverScript 
 	local script = Instance.new('LocalScript', Dropper)
 
 	-- This is for the buttons effects.
@@ -284,8 +252,8 @@ local function BQHBX_fake_script() -- Dropper.HoverScript
 		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
 	end)
 end
-coroutine.wrap(BQHBX_fake_script)()
-local function HMLH_fake_script() -- Dropper.Tpx 
+coroutine.wrap(EWKNU_fake_script)()
+local function NLGMCQ_fake_script() -- Dropper.Tpx 
 	local script = Instance.new('LocalScript', Dropper)
 
 	script.Parent.MouseButton1Click:connect(function(plr)
@@ -294,4 +262,4 @@ local function HMLH_fake_script() -- Dropper.Tpx
 		wait(0.1)
 	end)
 end
-coroutine.wrap(HMLH_fake_script)()
+coroutine.wrap(NLGMCQ_fake_script)()
