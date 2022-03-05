@@ -26,7 +26,7 @@ local UICorner_4 = Instance.new("UICorner")
 --Properties:
 
 MainGui.Name = "MainGui"
-MainGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+MainGui.Parent = game.CoreGui
 MainGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 mainLobby.Name = "mainLobby"
@@ -186,7 +186,7 @@ UICorner_4.Parent = mainLobby
 
 -- Scripts:
 
-local function FKRCPS_fake_script() -- mainLobby.PlayerNames 
+local function TKAE_fake_script() -- mainLobby.PlayerNames 
 	local script = Instance.new('LocalScript', mainLobby)
 
 	local plr = game.Players.LocalPlayer
@@ -194,8 +194,8 @@ local function FKRCPS_fake_script() -- mainLobby.PlayerNames
 	script.Parent.DisplayName.Text = plr.DisplayName
 	script.Parent.Username.Text = "@"..plr.Name 
 end
-coroutine.wrap(FKRCPS_fake_script)()
-local function SXGYTAM_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(TKAE_fake_script)()
+local function BQNLL_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local plr = game.Players.LocalPlayer
@@ -203,8 +203,8 @@ local function SXGYTAM_fake_script() -- ImageLabel.LocalScript
 	
 	script.Parent.Image = img
 end
-coroutine.wrap(SXGYTAM_fake_script)()
-local function EWKNU_fake_script() -- Dropper.HoverScript 
+coroutine.wrap(BQNLL_fake_script)()
+local function XMYYU_fake_script() -- Dropper.HoverScript 
 	local script = Instance.new('LocalScript', Dropper)
 
 	-- This is for the buttons effects.
@@ -252,8 +252,8 @@ local function EWKNU_fake_script() -- Dropper.HoverScript
 		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
 	end)
 end
-coroutine.wrap(EWKNU_fake_script)()
-local function NLGMCQ_fake_script() -- Dropper.Tpx 
+coroutine.wrap(XMYYU_fake_script)()
+local function VJDJTOF_fake_script() -- Dropper.Tpx 
 	local script = Instance.new('LocalScript', Dropper)
 
 	script.Parent.MouseButton1Click:connect(function(plr)
@@ -262,4 +262,4 @@ local function NLGMCQ_fake_script() -- Dropper.Tpx
 		wait(0.1)
 	end)
 end
-coroutine.wrap(NLGMCQ_fake_script)()
+coroutine.wrap(VJDJTOF_fake_script)()
