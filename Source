@@ -17,7 +17,7 @@ local Frame = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
 local UIGradient = Instance.new("UIGradient")
 local moon = Instance.new("ImageLabel")
-local Dropper = Instance.new("TextButton")
+local AboutUs = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
 local RightArrow = Instance.new("TextLabel")
 local LeftArrow = Instance.new("TextLabel")
@@ -140,22 +140,22 @@ moon.Image = "rbxassetid://7072719446"
 moon.ImageColor3 = Color3.fromRGB(74, 74, 74)
 moon.ImageTransparency = 0.700
 
-Dropper.Name = "Dropper"
-Dropper.Parent = mainLobby
-Dropper.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
-Dropper.BackgroundTransparency = 0.700
-Dropper.Position = UDim2.new(0.205073997, 0, 0.259786487, 0)
-Dropper.Size = UDim2.new(0.585623682, 0, 0.167259783, 0)
-Dropper.Font = Enum.Font.SourceSansBold
-Dropper.Text = "DaHood Cash Dropper"
-Dropper.TextColor3 = Color3.fromRGB(255, 255, 255)
-Dropper.TextSize = 20.000
-Dropper.TextWrapped = true
+AboutUs.Name = "About Us"
+AboutUs.Parent = mainLobby
+AboutUs.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+AboutUs.BackgroundTransparency = 0.700
+AboutUs.Position = UDim2.new(0.205073997, 0, 0.259786487, 0)
+AboutUs.Size = UDim2.new(0.585623682, 0, 0.167259783, 0)
+AboutUs.Font = Enum.Font.SourceSansBold
+AboutUs.Text = "About Us"
+AboutUs.TextColor3 = Color3.fromRGB(255, 255, 255)
+AboutUs.TextSize = 20.000
+AboutUs.TextWrapped = true
 
-UICorner_3.Parent = Dropper
+UICorner_3.Parent = AboutUs
 
 RightArrow.Name = "RightArrow"
-RightArrow.Parent = Dropper
+RightArrow.Parent = AboutUs
 RightArrow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 RightArrow.BackgroundTransparency = 1.000
 RightArrow.Position = UDim2.new(0.95745492, 0, -0.00872340426, 0)
@@ -169,7 +169,7 @@ RightArrow.TextTransparency = 1.000
 RightArrow.TextWrapped = true
 
 LeftArrow.Name = "LeftArrow"
-LeftArrow.Parent = Dropper
+LeftArrow.Parent = AboutUs
 LeftArrow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 LeftArrow.BackgroundTransparency = 1.000
 LeftArrow.Position = UDim2.new(-0.219675094, 0, -0.00872340426, 0)
@@ -186,7 +186,7 @@ UICorner_4.Parent = mainLobby
 
 -- Scripts:
 
-local function MHAHXLN_fake_script() -- mainLobby.PlayerNames 
+local function KMGJG_fake_script() -- mainLobby.PlayerNames 
 	local script = Instance.new('LocalScript', mainLobby)
 
 	local plr = game.Players.LocalPlayer
@@ -194,8 +194,8 @@ local function MHAHXLN_fake_script() -- mainLobby.PlayerNames
 	script.Parent.DisplayName.Text = plr.DisplayName
 	script.Parent.Username.Text = "@"..plr.Name 
 end
-coroutine.wrap(MHAHXLN_fake_script)()
-local function ICUN_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(KMGJG_fake_script)()
+local function INRWA_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local plr = game.Players.LocalPlayer
@@ -203,9 +203,9 @@ local function ICUN_fake_script() -- ImageLabel.LocalScript
 	
 	script.Parent.Image = img
 end
-coroutine.wrap(ICUN_fake_script)()
-local function CFQCXZ_fake_script() -- Dropper.HoverScript 
-	local script = Instance.new('LocalScript', Dropper)
+coroutine.wrap(INRWA_fake_script)()
+local function XPAAR_fake_script() -- AboutUs.HoverScript 
+	local script = Instance.new('LocalScript', AboutUs)
 
 	-- This is for the buttons effects.
 	-- Edit if you know what you are doing.
@@ -252,14 +252,4 @@ local function CFQCXZ_fake_script() -- Dropper.HoverScript
 		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
 	end)
 end
-coroutine.wrap(CFQCXZ_fake_script)()
-local function DLZGU_fake_script() -- Dropper.Tpx 
-	local script = Instance.new('LocalScript', Dropper)
-
-	script.Parent.MouseButton1Click:connect(function(plr)
-		plr.PlayerGui.MainGui.mainLobby.Visible = false
-		plr.PlayerGui.MainGui.dropperFrame.Visible = true
-		wait(0.1)
-	end)
-end
-coroutine.wrap(DLZGU_fake_script)()
+coroutine.wrap(XPAAR_fake_script)()
