@@ -1,9 +1,9 @@
--- Eclipse
--- Version: 1
+-- Gui to Lua
+-- Version: 3.2
 
 -- Instances:
 
-local MainGui1Test = Instance.new("ScreenGui")
+local MainGui = Instance.new("ScreenGui")
 local mainLobby = Instance.new("Frame")
 local DisplayName = Instance.new("TextLabel")
 local Username = Instance.new("TextLabel")
@@ -19,41 +19,37 @@ local LeftArrow = Instance.new("TextLabel")
 local UICorner_3 = Instance.new("UICorner")
 local Pattern = Instance.new("ImageLabel")
 local ImageButton = Instance.new("ImageButton")
-local dropperFrame = Instance.new("Frame")
-local UIGradient_2 = Instance.new("UIGradient")
+local TextButton = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
+local UIGradient_2 = Instance.new("UIGradient")
+local dropperFrame = Instance.new("Frame")
+local UIGradient_3 = Instance.new("UIGradient")
+local UICorner_5 = Instance.new("UICorner")
 local Pattern_2 = Instance.new("ImageLabel")
 local Back_2 = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
+local UICorner_6 = Instance.new("UICorner")
 local RightArrow_2 = Instance.new("TextLabel")
 local LeftArrow_2 = Instance.new("TextLabel")
 local TextLabel = Instance.new("TextLabel")
 local Main = Instance.new("TextLabel")
 local Main_2 = Instance.new("TextLabel")
-local PopOut = Instance.new("Frame")
-local UICorner_6 = Instance.new("UICorner")
-local Pattern_3 = Instance.new("ImageLabel")
-local UIGradient_3 = Instance.new("UIGradient")
-local TextButton = Instance.new("TextButton")
+local hackFrame1 = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
 local UIGradient_4 = Instance.new("UIGradient")
-local hackFrame1 = Instance.new("Frame")
-local UICorner_8 = Instance.new("UICorner")
-local UIGradient_5 = Instance.new("UIGradient")
-local Pattern_4 = Instance.new("ImageLabel")
+local Pattern_3 = Instance.new("ImageLabel")
 local Back_3 = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
 local RightArrow_3 = Instance.new("TextLabel")
 local LeftArrow_3 = Instance.new("TextLabel")
 
 --Properties:
 
-MainGui1Test.Name = "MainGui1Test"
-MainGui1Test.Parent = game.CoreGui
-MainGui1Test.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+MainGui.Name = "MainGui"
+MainGui.Parent = game.CoreGui
+MainGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 mainLobby.Name = "mainLobby"
-mainLobby.Parent = MainGui1Test
+mainLobby.Parent = MainGui
 mainLobby.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 mainLobby.BorderColor3 = Color3.fromRGB(27, 42, 53)
 mainLobby.BorderSizePixel = 0
@@ -192,8 +188,24 @@ ImageButton.Size = UDim2.new(0, 44, 0, 45)
 ImageButton.ZIndex = 999999999
 ImageButton.Image = "rbxassetid://7072718840"
 
+TextButton.Parent = mainLobby
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.488308728, 0, 0.834043741, 0)
+TextButton.Size = UDim2.new(0, 68, 0, 36)
+TextButton.ZIndex = 999
+TextButton.Font = Enum.Font.GothamSemibold
+TextButton.Text = "Hacks1"
+TextButton.TextColor3 = Color3.fromRGB(100, 100, 100)
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner_4.Parent = TextButton
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(182, 141, 159)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(64, 96, 161))}
+UIGradient_2.Parent = TextButton
+
 dropperFrame.Name = "dropperFrame"
-dropperFrame.Parent = MainGui1Test
+dropperFrame.Parent = MainGui
 dropperFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 dropperFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
 dropperFrame.BorderSizePixel = 0
@@ -201,11 +213,11 @@ dropperFrame.Position = UDim2.new(0, 314, 0, 233)
 dropperFrame.Size = UDim2.new(0.369820178, 0, 0.394444436, 0)
 dropperFrame.Visible = false
 
-UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(182, 141, 159)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(64, 96, 161))}
-UIGradient_2.Rotation = 50
-UIGradient_2.Parent = dropperFrame
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(182, 141, 159)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(64, 96, 161))}
+UIGradient_3.Rotation = 50
+UIGradient_3.Parent = dropperFrame
 
-UICorner_4.Parent = dropperFrame
+UICorner_5.Parent = dropperFrame
 
 Pattern_2.Name = "Pattern"
 Pattern_2.Parent = dropperFrame
@@ -233,7 +245,7 @@ Back_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Back_2.TextSize = 20.000
 Back_2.TextWrapped = true
 
-UICorner_5.Parent = Back_2
+UICorner_6.Parent = Back_2
 
 RightArrow_2.Name = "RightArrow"
 RightArrow_2.Parent = Back_2
@@ -299,71 +311,30 @@ Main_2.TextScaled = true
 Main_2.TextSize = 14.000
 Main_2.TextWrapped = true
 
-PopOut.Name = "PopOut"
-PopOut.Parent = MainGui1Test
-PopOut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PopOut.Position = UDim2.new(0, 787, 0, 235)
-PopOut.Size = UDim2.new(0.0609851442, 0, 0.390277773, 0)
-PopOut.Visible = false
-
-UICorner_6.Parent = PopOut
-
-Pattern_3.Name = "Pattern"
-Pattern_3.Parent = PopOut
-Pattern_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Pattern_3.BackgroundTransparency = 1.000
-Pattern_3.Size = UDim2.new(1, 0, 1, 0)
-Pattern_3.ZIndex = 2
-Pattern_3.Image = "rbxassetid://2151741365"
-Pattern_3.ImageTransparency = 0.600
-Pattern_3.ScaleType = Enum.ScaleType.Tile
-Pattern_3.SliceCenter = Rect.new(0, 256, 0, 256)
-Pattern_3.TileSize = UDim2.new(0, 250, 0, 250)
-
-UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(63, 27, 70)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(17, 3, 127))}
-UIGradient_3.Rotation = 180
-UIGradient_3.Parent = PopOut
-
-TextButton.Parent = PopOut
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.Position = UDim2.new(0.0641025677, 0, 0.0292831957, 0)
-TextButton.Size = UDim2.new(0, 68, 0, 36)
-TextButton.ZIndex = 999
-TextButton.Font = Enum.Font.GothamSemibold
-TextButton.Text = "Hacks1"
-TextButton.TextColor3 = Color3.fromRGB(100, 100, 100)
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
-
-UICorner_7.Parent = TextButton
-
-UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(182, 141, 159)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(64, 96, 161))}
-UIGradient_4.Parent = TextButton
-
 hackFrame1.Name = "hackFrame1"
-hackFrame1.Parent = MainGui1Test
+hackFrame1.Parent = MainGui
 hackFrame1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 hackFrame1.Position = UDim2.new(0, 314, 0, 235)
 hackFrame1.Size = UDim2.new(0.369820178, 0, 0.390277773, 0)
 hackFrame1.Visible = false
 
-UICorner_8.Parent = hackFrame1
+UICorner_7.Parent = hackFrame1
 
-UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(102, 45, 113)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(197, 66, 110))}
-UIGradient_5.Parent = hackFrame1
+UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(102, 45, 113)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(197, 66, 110))}
+UIGradient_4.Parent = hackFrame1
 
-Pattern_4.Name = "Pattern"
-Pattern_4.Parent = hackFrame1
-Pattern_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Pattern_4.BackgroundTransparency = 1.000
-Pattern_4.Position = UDim2.new(-0.00357621908, 0, -0.00101324916, 0)
-Pattern_4.Size = UDim2.new(0, 473, 0, 280)
-Pattern_4.ZIndex = 9
-Pattern_4.Image = "rbxassetid://121480522"
-Pattern_4.ImageTransparency = 0.600
-Pattern_4.ScaleType = Enum.ScaleType.Tile
-Pattern_4.SliceCenter = Rect.new(0, 256, 0, 256)
-Pattern_4.TileSize = UDim2.new(0, 45, 0, 45)
+Pattern_3.Name = "Pattern"
+Pattern_3.Parent = hackFrame1
+Pattern_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pattern_3.BackgroundTransparency = 1.000
+Pattern_3.Position = UDim2.new(-0.00357621908, 0, -0.00101324916, 0)
+Pattern_3.Size = UDim2.new(0, 473, 0, 280)
+Pattern_3.ZIndex = 9
+Pattern_3.Image = "rbxassetid://121480522"
+Pattern_3.ImageTransparency = 0.600
+Pattern_3.ScaleType = Enum.ScaleType.Tile
+Pattern_3.SliceCenter = Rect.new(0, 256, 0, 256)
+Pattern_3.TileSize = UDim2.new(0, 45, 0, 45)
 
 Back_3.Name = "Back"
 Back_3.Parent = hackFrame1
@@ -378,7 +349,7 @@ Back_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 Back_3.TextSize = 20.000
 Back_3.TextWrapped = true
 
-UICorner_9.Parent = Back_3
+UICorner_8.Parent = Back_3
 
 RightArrow_3.Name = "RightArrow"
 RightArrow_3.Parent = Back_3
@@ -410,7 +381,7 @@ LeftArrow_3.TextWrapped = true
 
 -- Scripts:
 
-local function MWINPM_fake_script() -- mainLobby.PlayerNames 
+local function FDGSN_fake_script() -- mainLobby.PlayerNames 
 	local script = Instance.new('LocalScript', mainLobby)
 
 	local plr = game.Players.LocalPlayer
@@ -418,8 +389,8 @@ local function MWINPM_fake_script() -- mainLobby.PlayerNames
 	script.Parent.DisplayName.Text = plr.DisplayName
 	script.Parent.Username.Text = "@"..plr.Name 
 end
-coroutine.wrap(MWINPM_fake_script)()
-local function ENBAS_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(FDGSN_fake_script)()
+local function VSDV_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local plr = game.Players.LocalPlayer
@@ -427,8 +398,8 @@ local function ENBAS_fake_script() -- ImageLabel.LocalScript
 	
 	script.Parent.Image = img
 end
-coroutine.wrap(ENBAS_fake_script)()
-local function ZBDZPS_fake_script() -- AboutUs.HoverScript 
+coroutine.wrap(VSDV_fake_script)()
+local function PKYNSH_fake_script() -- AboutUs.HoverScript 
 	local script = Instance.new('LocalScript', AboutUs)
 
 	-- This is for the buttons effects.
@@ -476,8 +447,8 @@ local function ZBDZPS_fake_script() -- AboutUs.HoverScript
 		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
 	end)
 end
-coroutine.wrap(ZBDZPS_fake_script)()
-local function KGOG_fake_script() -- AboutUs.LocalScript 
+coroutine.wrap(PKYNSH_fake_script)()
+local function QBIWWX_fake_script() -- AboutUs.LocalScript 
 	local script = Instance.new('LocalScript', AboutUs)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -486,8 +457,8 @@ local function KGOG_fake_script() -- AboutUs.LocalScript
 	
 	end)
 end
-coroutine.wrap(KGOG_fake_script)()
-local function BRUVPN_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(QBIWWX_fake_script)()
+local function PBEJQGR_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -496,67 +467,8 @@ local function BRUVPN_fake_script() -- ImageButton.LocalScript
 	
 	end)
 end
-coroutine.wrap(BRUVPN_fake_script)()
-local function MYTQW_fake_script() -- Back_2.HoverScript 
-	local script = Instance.new('LocalScript', Back_2)
-
-	-- This is for the buttons effects.
-	-- Edit if you know what you are doing.
-	
-	local button = script.Parent
-	local leftarrow = script.Parent.LeftArrow
-	local rightarrow = script.Parent.RightArrow
-	local TweenService = game:GetService("TweenService")
-	local TweenSpeed = 0.1
-	local Info = TweenInfo.new(TweenSpeed, Enum.EasingStyle.Quad, Enum.EasingDirection.In, 0)
-	
-	--- Position ---
-	
-	button.MouseEnter:Connect(function()
-		leftarrow:TweenPosition(UDim2.new(0, 0,-0.03, 0), "In", "Quad", 0.1, true)
-		rightarrow:TweenPosition(UDim2.new(0.735, 0,-0.03, 0), "In", "Quad", 0.1, true)
-	end)
-	button.MouseLeave:Connect(function()
-		leftarrow:TweenPosition(UDim2.new(-0.05, 0,-0.03, 0), "Out", "Quad", 0.1, true)
-		rightarrow:TweenPosition(UDim2.new(0.795, 0,-0.03, 0), "Out", "Quad", 0.1, true)
-	end)
-	
-	--- Color ---
-	
-	button.MouseEnter:Connect(function()
-		local Color = Color3.fromRGB(60, 60, 60)
-		TweenService:Create(button, Info, {BackgroundColor3 = Color}):Play()
-	end)
-	
-	button.MouseLeave:Connect(function()
-		local ColorColor = Color3.fromRGB(43, 43, 43)
-		TweenService:Create(button, Info, {BackgroundColor3 = ColorColor}):Play()
-	end)
-	
-	--- Transparency ---
-	
-	button.MouseEnter:Connect(function()
-		TweenService:Create(leftarrow, Info, {TextTransparency = 0}):Play()
-		TweenService:Create(rightarrow, Info, {TextTransparency = 0}):Play()
-	end)
-	
-	button.MouseLeave:Connect(function()
-		TweenService:Create(leftarrow, Info, {TextTransparency = 1}):Play()
-		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
-	end)
-end
-coroutine.wrap(MYTQW_fake_script)()
-local function NDUJQUG_fake_script() -- Back_2.LocalScript 
-	local script = Instance.new('LocalScript', Back_2)
-
-	script.Parent.MouseButton1Down:connect(function()
-		script.Parent.Parent.Parent.dropperFrame.Visible = false
-		script.Parent.Parent.Parent.mainLobby.Visible = true
-	
-	end)
-end
-coroutine.wrap(NDUJQUG_fake_script)()
-local function WPQWBNR_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(PBEJQGR_fake_script)()
+local function ABSUBY_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -565,8 +477,67 @@ local function WPQWBNR_fake_script() -- TextButton.LocalScript
 		script.Parent.Parent.Parent.PopOut.Visible = false
 	end)
 end
-coroutine.wrap(WPQWBNR_fake_script)()
-local function DPQY_fake_script() -- Back_3.HoverScript 
+coroutine.wrap(ABSUBY_fake_script)()
+local function YTUYA_fake_script() -- Back_2.HoverScript 
+	local script = Instance.new('LocalScript', Back_2)
+
+	-- This is for the buttons effects.
+	-- Edit if you know what you are doing.
+	
+	local button = script.Parent
+	local leftarrow = script.Parent.LeftArrow
+	local rightarrow = script.Parent.RightArrow
+	local TweenService = game:GetService("TweenService")
+	local TweenSpeed = 0.1
+	local Info = TweenInfo.new(TweenSpeed, Enum.EasingStyle.Quad, Enum.EasingDirection.In, 0)
+	
+	--- Position ---
+	
+	button.MouseEnter:Connect(function()
+		leftarrow:TweenPosition(UDim2.new(0, 0,-0.03, 0), "In", "Quad", 0.1, true)
+		rightarrow:TweenPosition(UDim2.new(0.735, 0,-0.03, 0), "In", "Quad", 0.1, true)
+	end)
+	button.MouseLeave:Connect(function()
+		leftarrow:TweenPosition(UDim2.new(-0.05, 0,-0.03, 0), "Out", "Quad", 0.1, true)
+		rightarrow:TweenPosition(UDim2.new(0.795, 0,-0.03, 0), "Out", "Quad", 0.1, true)
+	end)
+	
+	--- Color ---
+	
+	button.MouseEnter:Connect(function()
+		local Color = Color3.fromRGB(60, 60, 60)
+		TweenService:Create(button, Info, {BackgroundColor3 = Color}):Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		local ColorColor = Color3.fromRGB(43, 43, 43)
+		TweenService:Create(button, Info, {BackgroundColor3 = ColorColor}):Play()
+	end)
+	
+	--- Transparency ---
+	
+	button.MouseEnter:Connect(function()
+		TweenService:Create(leftarrow, Info, {TextTransparency = 0}):Play()
+		TweenService:Create(rightarrow, Info, {TextTransparency = 0}):Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		TweenService:Create(leftarrow, Info, {TextTransparency = 1}):Play()
+		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
+	end)
+end
+coroutine.wrap(YTUYA_fake_script)()
+local function BHCS_fake_script() -- Back_2.LocalScript 
+	local script = Instance.new('LocalScript', Back_2)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.Parent.dropperFrame.Visible = false
+		script.Parent.Parent.Parent.mainLobby.Visible = true
+	
+	end)
+end
+coroutine.wrap(BHCS_fake_script)()
+local function YIWNSFP_fake_script() -- Back_3.HoverScript 
 	local script = Instance.new('LocalScript', Back_3)
 
 	-- This is for the buttons effects.
@@ -614,8 +585,8 @@ local function DPQY_fake_script() -- Back_3.HoverScript
 		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
 	end)
 end
-coroutine.wrap(DPQY_fake_script)()
-local function DDMQE_fake_script() -- Back_3.LocalScript 
+coroutine.wrap(YIWNSFP_fake_script)()
+local function VXULNB_fake_script() -- Back_3.LocalScript 
 	local script = Instance.new('LocalScript', Back_3)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -624,4 +595,4 @@ local function DDMQE_fake_script() -- Back_3.LocalScript
 	
 	end)
 end
-coroutine.wrap(DDMQE_fake_script)()
+coroutine.wrap(VXULNB_fake_script)()
