@@ -5,23 +5,20 @@
 
 local MainGui = Instance.new("ScreenGui")
 local mainLobby = Instance.new("Frame")
-local Pattern = Instance.new("ImageLabel")
 local DisplayName = Instance.new("TextLabel")
 local Username = Instance.new("TextLabel")
 local ImageLabel = Instance.new("ImageLabel")
 local UICorner = Instance.new("UICorner")
 local Back = Instance.new("TextLabel")
 local Icon = Instance.new("ImageLabel")
-local ImageButton = Instance.new("ImageButton")
-local Frame = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
 local UIGradient = Instance.new("UIGradient")
 local moon = Instance.new("ImageLabel")
 local AboutUs = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
 local RightArrow = Instance.new("TextLabel")
 local LeftArrow = Instance.new("TextLabel")
-local UICorner_4 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
+local Pattern = Instance.new("ImageLabel")
 
 --Properties:
 
@@ -36,20 +33,8 @@ mainLobby.BorderColor3 = Color3.fromRGB(27, 42, 53)
 mainLobby.BorderSizePixel = 0
 mainLobby.Position = UDim2.new(0.246286154, 0, 0.326388896, 0)
 mainLobby.Size = UDim2.new(0.369820178, 0, 0.390277773, 0)
-MainGui.Active = true
-MainGui.Draggable = true
-
-Pattern.Name = "Pattern"
-Pattern.Parent = mainLobby
-Pattern.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Pattern.BackgroundTransparency = 1.000
-Pattern.Size = UDim2.new(1, 0, 1, 0)
-Pattern.ZIndex = 2
-Pattern.Image = "rbxassetid://2151741365"
-Pattern.ImageTransparency = 0.600
-Pattern.ScaleType = Enum.ScaleType.Tile
-Pattern.SliceCenter = Rect.new(0, 256, 0, 256)
-Pattern.TileSize = UDim2.new(0, 250, 0, 250)
+mainLobby.Active = true
+mainLobby.Draggable = true
 
 DisplayName.Name = "DisplayName"
 DisplayName.Parent = mainLobby
@@ -113,21 +98,6 @@ Icon.Size = UDim2.new(0.0718816072, 0, 0.135231316, 0)
 Icon.ZIndex = 99999
 Icon.Image = "rbxassetid://7072718840"
 
-ImageButton.Parent = Icon
-ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton.Position = UDim2.new(0, 0, -3.97981722e-07, 0)
-ImageButton.Size = UDim2.new(0, 34, 0, 38)
-ImageButton.ZIndex = 999999999
-ImageButton.Image = "rbxassetid://7072718840"
-
-Frame.Parent = ImageButton
-Frame.BackgroundColor3 = Color3.fromRGB(85, 85, 85)
-Frame.BackgroundTransparency = 0.500
-Frame.Position = UDim2.new(0, 0, -3.97981722e-07, 0)
-Frame.Size = UDim2.new(0, 34, 0, 38)
-
-UICorner_2.Parent = Frame
-
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(63, 27, 70)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(17, 3, 127))}
 UIGradient.Parent = mainLobby
 
@@ -152,7 +122,7 @@ AboutUs.TextColor3 = Color3.fromRGB(255, 255, 255)
 AboutUs.TextSize = 20.000
 AboutUs.TextWrapped = true
 
-UICorner_3.Parent = AboutUs
+UICorner_2.Parent = AboutUs
 
 RightArrow.Name = "RightArrow"
 RightArrow.Parent = AboutUs
@@ -182,11 +152,23 @@ LeftArrow.TextSize = 14.000
 LeftArrow.TextTransparency = 1.000
 LeftArrow.TextWrapped = true
 
-UICorner_4.Parent = mainLobby
+UICorner_3.Parent = mainLobby
+
+Pattern.Name = "Pattern"
+Pattern.Parent = mainLobby
+Pattern.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pattern.BackgroundTransparency = 1.000
+Pattern.Size = UDim2.new(1, 0, 1, 0)
+Pattern.ZIndex = 2
+Pattern.Image = "rbxassetid://2151741365"
+Pattern.ImageTransparency = 0.600
+Pattern.ScaleType = Enum.ScaleType.Tile
+Pattern.SliceCenter = Rect.new(0, 256, 0, 256)
+Pattern.TileSize = UDim2.new(0, 250, 0, 250)
 
 -- Scripts:
 
-local function KMGJG_fake_script() -- mainLobby.PlayerNames 
+local function HAYGNNL_fake_script() -- mainLobby.PlayerNames 
 	local script = Instance.new('LocalScript', mainLobby)
 
 	local plr = game.Players.LocalPlayer
@@ -194,8 +176,8 @@ local function KMGJG_fake_script() -- mainLobby.PlayerNames
 	script.Parent.DisplayName.Text = plr.DisplayName
 	script.Parent.Username.Text = "@"..plr.Name 
 end
-coroutine.wrap(KMGJG_fake_script)()
-local function INRWA_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(HAYGNNL_fake_script)()
+local function UDZK_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local plr = game.Players.LocalPlayer
@@ -203,8 +185,8 @@ local function INRWA_fake_script() -- ImageLabel.LocalScript
 	
 	script.Parent.Image = img
 end
-coroutine.wrap(INRWA_fake_script)()
-local function XPAAR_fake_script() -- AboutUs.HoverScript 
+coroutine.wrap(UDZK_fake_script)()
+local function PYXJ_fake_script() -- AboutUs.HoverScript 
 	local script = Instance.new('LocalScript', AboutUs)
 
 	-- This is for the buttons effects.
@@ -252,4 +234,4 @@ local function XPAAR_fake_script() -- AboutUs.HoverScript
 		TweenService:Create(rightarrow, Info, {TextTransparency = 1}):Play()
 	end)
 end
-coroutine.wrap(XPAAR_fake_script)()
+coroutine.wrap(PYXJ_fake_script)()
