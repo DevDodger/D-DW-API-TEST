@@ -47,7 +47,7 @@ local LeftArrow_3 = Instance.new("TextLabel")
 --Properties:
 
 MainGui.Name = "MainGui"
-MainGui.Parent = game.Workspace
+MainGui.Parent = game.CoreGui
 MainGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 mainLobby.Name = "mainLobby"
